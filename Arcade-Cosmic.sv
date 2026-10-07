@@ -370,8 +370,8 @@ wire        direct_video;
 wire [15:0] joy1_USB, joy2_USB;
 // [MiSTer-DB9 END]
 // [MiSTer-DB9-Pro BEGIN] - DB controllers muted while OSD is open
-wire [31:0] joy1 = joydb_1ena ? (OSD_STATUS ? 32'b0 : joydb_1_mapped[8:0]) : joy1_USB;
-wire [31:0] joy2 = joydb_2ena ? (OSD_STATUS ? 32'b0 : joydb_2_mapped[8:0]) : joydb_1ena ? joy1_USB : joy2_USB;
+wire [31:0] joy1 = joydb_1ena ? (OSD_STATUS ? 32'b0 : joydb_1_mapped[9:0]) : joy1_USB;
+wire [31:0] joy2 = joydb_2ena ? (OSD_STATUS ? 32'b0 : joydb_2_mapped[9:0]) : joydb_1ena ? joy1_USB : joy2_USB;
 // [MiSTer-DB9-Pro END]
 
 wire        ioctl_download;
